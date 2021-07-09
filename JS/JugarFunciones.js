@@ -89,11 +89,13 @@ function LanzarDado() {
       if (ArrayJuego[aux1].getifConductor() === false) {
         //swal("Maquina Jugando \nTurno de " + ArrayJuego[aux1].getNombre(), "");
         document.getElementById("Tirar_Dado").disabled = true;
+ 
         LanzarDado();
       } else {
         //swal("Turno de " + ArrayJuego[aux1].getNombre() + "\n ¡Tira del Dado! :D","");
         dado(0);
         document.getElementById("Tirar_Dado").disabled = false;
+    
       }
     }, 1500);
     document.getElementById("Tirar_Dado").disabled = true;
