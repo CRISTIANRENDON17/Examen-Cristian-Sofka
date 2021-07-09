@@ -15,25 +15,26 @@
     <div class="alert alert-info" role="alert">
         <h1 class="text-center">Ingreso de datos</h1>
         <hr>
-        <h3 class="text-center"><strong>Datos Jugadores</strong></h3>
+        
         <div id="Parte1">
             
             <div class="row">
 
                 <div class="col-6">
+                    <h4 class="text-center"><strong>Datos Jugadores</strong></h4>
                     <label class="form-label"><strong>Cantidad de Jugadores</strong></label>
                     <div class="input-group mb-3">
-                        <input type="number" min="0" id="CantidadJugadores" class="form-control"
-                            placeholder="Ingrese Cantidad de Jugadores">
-                        <button class="btn btn-secondary" type="button" id="IngresarJugadores">Ingresar</button>
+                        <input type="number" min="0" id="CantidadJugadores" class="form-control" placeholder="Ingrese Cantidad de Jugadores">
+                        <button class="btn btn-secondary" type="button" id="IngresarJugadores">Agregar</button>
                     </div>
                 </div>
                 <div class="col-6">
+                    <h4 class="text-center"><strong>Datos CPU</strong></h4>
                     <label class="form-label"><strong>Cantidad de Jugadores CPU</strong></label>
                     <div class="input-group mb-3">
                         <input type="number" min="0" id="CantidadCpu" class="form-control"
                             placeholder="Ingrese Cantidad Jugadores CPU" ">
-                    <button class=" btn btn-secondary " type=" button " id="IngresarCpu">Ingresar</button>
+                    <button class=" btn btn-secondary " type=" button " id="IngresarCpu">Agregar</button>
                     </div>
                 </div>
             </div>
@@ -42,16 +43,18 @@
             <div class="col-6">
                 <div id='datos'>
                 </div>
-                <br>
-                    <div id='parte1_1'>
-                        <button type="button" id="IngresarJ" disabled class="btn btn-primary">Ingresar Jugadores</button>
-                        <button type="button" id="Continuar"  class="btn btn-danger">Continuar</button>
-                    </div>
+                <div id='parte1_1' class="text-center">
+                    <button type="button" id="IngresarJ" disabled class="btn btn-primary">Ingresar Jugadores</button>
                 </div>
+            </div>
             <div class="col-6">
                 <div id='datos2'>
                 </div>
             </div>
+        </div>
+        <br>
+        <div class="text-center">
+            <button type="button" id="Continuar"  class="btn btn-danger">Continuar</button>
         </div>
         <hr>
         <h3 class="text-center"><strong>Datos de la pista</strong></h3>
@@ -75,8 +78,8 @@
                 </div>
             </div>
         </div>
-        <div id="parte2">
-            <button class="btn btn-primary" id="botonparte2" disabled >Guardar/Continuar</button>
+        <div id="parte2" class="text-center">
+            <button class="btn btn-danger" id="botonparte2" disabled >Guardar/Continuar</button>
         </div>
         <hr>
 
@@ -85,8 +88,8 @@
 
             <div class="row" id="ListaCarros">
             </div>
-            <div id="parte2_2">
-                <button class="btn btn-primary" id="BotonGuardarCarro" disabled>Guardar/Continuar</button>
+            <div id="parte2_2" class="text-center">
+                <button class="btn btn-danger" id="BotonGuardarCarro" disabled>Guardar/Continuar</button>
             </div>
         </div>
         <hr>

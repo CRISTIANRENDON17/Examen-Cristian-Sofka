@@ -48,11 +48,11 @@ class Aux {
 
 window.onload = function () {
   if (ArrayJuego[contador2].getifConductor() === false) {
-    swal("Maquina Jugando \n Turno de " + ArrayJuego[contador2].getNombre(),"");
+    //swal("Maquina Jugando \n Turno de " + ArrayJuego[contador2].getNombre(),"");
     document.getElementById("Tirar_Dado").disabled = true;
     LanzarDado();
   } else {
-    swal("Turno de " + ArrayJuego[contador2].getNombre() + "\n ¡Tira del Dado! :D","");
+    //swal("Turno de " + ArrayJuego[contador2].getNombre() + "\n ¡Tira del Dado! :D","");
   }
 };
 
@@ -71,10 +71,10 @@ function LanzarDado() {
 
     let auxPos = BuscarOrden(contador2);
     ArrayJuego[auxPos].setKm(
-      ArrayJuego[auxPos].getKm() + NumeroAleatorio * 100
+    ArrayJuego[auxPos].getKm() + NumeroAleatorio * 100
     ); //guarda el kilometraje del dado
 
-    document.getElementById("Turno_de").innerHTML = `Turno de: ${ArrayJuego[auxPos].getNombre()}`;
+    //document.getElementById("Turno_de").innerHTML = `Turno de: ${ArrayJuego[auxPos].getNombre()}`;
     OrdenarArrayJuego();
     //ArrayJuego[contador2].getKm =
     if (contador2 === contador - 1) {
@@ -85,17 +85,17 @@ function LanzarDado() {
     if(bandera === false){
       setTimeout(function () {
       let aux1 = BuscarOrden(contador2);
-      document.getElementById("Turno_de").innerHTML = `Turno de: ${ArrayJuego[aux1].getNombre()}`;
+      document.getElementById("Turno_de").innerHTML = ` ${ArrayJuego[aux1].getNombre()}`;
       if (ArrayJuego[aux1].getifConductor() === false) {
-        swal("Maquina Jugando \nTurno de " + ArrayJuego[aux1].getNombre(), "");
+        //swal("Maquina Jugando \nTurno de " + ArrayJuego[aux1].getNombre(), "");
         document.getElementById("Tirar_Dado").disabled = true;
         LanzarDado();
       } else {
-        swal("Turno de " + ArrayJuego[aux1].getNombre() + "\n ¡Tira del Dado! :D","");
+        //swal("Turno de " + ArrayJuego[aux1].getNombre() + "\n ¡Tira del Dado! :D","");
         dado(0);
         document.getElementById("Tirar_Dado").disabled = false;
       }
-    }, 2000);
+    }, 1500);
     document.getElementById("Tirar_Dado").disabled = true;
     }
   } else if (bandera === true) {
@@ -255,7 +255,7 @@ function PinatarCarros(data, i) {
       </div>
       `;
     if (i === 1) {
-      document.getElementById("Turno_de").innerHTML = `Turno de: ${nombre}`;
+      document.getElementById("Turno_de").innerHTML = ` ${nombre}`;
       document.getElementById("Pista_1").innerHTML = `
         <div style="position:absolute; z-index:1; margin: 30px 0 0 0px;">
           <div style="background: aliceblue; width: 150px; height: 25px; text-align: center;margin: 0 0 0 50px;">

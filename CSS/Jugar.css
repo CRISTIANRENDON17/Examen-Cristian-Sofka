@@ -144,3 +144,13 @@ body{
     margin: -200px 0 0  -200px;
     z-index:2;
 }
+.rojo{
+    color: darkblue;
+}
+
+.fondo_color{
+    background: black;
+    color:white;
+    border-radius: 5em;
+   
+}

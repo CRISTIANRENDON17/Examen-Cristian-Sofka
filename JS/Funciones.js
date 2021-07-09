@@ -17,7 +17,16 @@ document.getElementById('IngresarJugadores').addEventListener('click', () => {
     let CJugadores = document.getElementById("CantidadJugadores").value;
     if (CJugadores === '') {
         swal("Hay cero Jugadores, por favor ingresa Jugadores","");
-    } else {
+    } 
+    else if(CJugadores > 30)
+    {
+        swal("Solo se pueden maximo 30 jugadores","");
+    }
+    else if(CJugadores <= 0  )
+    {
+        swal("Minimo 1 jugadores","");
+    }
+    else {
         let Datos = document.getElementById("datos");
         Datos.innerHTML = "<div>";
         for (let i = 0; i < CJugadores; i++) {
@@ -38,7 +47,6 @@ document.getElementById('IngresarJugadores').addEventListener('click', () => {
         button.disabled = false;
         let button2 = document.getElementById('IngresarJugadores');
         button2.disabled = true;
-        swal("¡Hola! Aqui podras colocar el nombre \n de tu personaje, pero si no quieres \n colocarlo, deja el campo vacio y la maquina \n te dara un nombre por defecto  \n ¡Buena suerte!","");
         
     }
     
@@ -72,7 +80,7 @@ document.getElementById('IngresarJ').addEventListener('click', () => {
 
 document.getElementById('IngresarCpu').addEventListener('click', () => {
     let CCpu = document.getElementById("CantidadCpu").value;
-    if(CCpu != '')
+    if(CCpu > 0 && CCpu< 30)
     {
          for(let i = 0; i < CCpu ; i++)
         {
@@ -87,7 +95,16 @@ document.getElementById('IngresarCpu').addEventListener('click', () => {
             //console.log(ArrayJugadores);
             let button = document.getElementById('IngresarCpu');
             button.disabled = true;
-    }else{
+    }
+    else if(CCpu <= 0)
+    {
+        swal("Ingrese minimo 1 Jugador CPU",""); 
+    }
+    else if(CCpu > 30)
+    {
+        swal("Maximo 30 Jugadores CPU",""); 
+    }
+    else{
         swal("Ingrese minimo un Jugador CPU",""); 
     }
 });
@@ -113,7 +130,7 @@ document.getElementById('Continuar').addEventListener('click', () => {
         document.getElementById("inputCCarros").value = cantidad;
         let botonparte2 = document.getElementById('botonparte2');
         botonparte2.disabled = false;   
-        swal("Hola al llenar el campo de kilometros de la pista, ten en cuenta colocar pocos tipo maximo 6, para que el juego no se te haga muy largo, pero si no quieres, puedes colocar todos los que quieras","");     
+        document.getElementById('Continuar').disabled = true;
     }
 });
 
@@ -122,6 +139,12 @@ document.getElementById('botonparte2').addEventListener('click', () => {
     if(inputKilometros === '')
     {
         swal("Ingrese Kilometros",""); 
+    }
+    else if(inputKilometros > 10){
+        swal("Hola..! solo puedes ingresar maximo 10 km","");     
+    }
+    else if(inputKilometros < 1){
+        swal("Hola..! solo puedes ingresar minimo 1 km",""); 
     }
     else{
         document.getElementById('BotonGuardarCarro').disabled = false;
