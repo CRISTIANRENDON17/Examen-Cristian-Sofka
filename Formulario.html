@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/bootstrap.css">
+    <link rel="stylesheet" href="./CSS/Fromulario.css">
+    <title>Formulario</title>
+</head>
+
+<body class="container">
+    <br>
+    <div class="alert alert-info" role="alert">
+        <h1 class="text-center">Ingreso de datos</h1>
+        <hr>
+        <h3 class="text-center"><strong>Datos Jugadores</strong></h3>
+        <div id="Parte1">
+            
+            <div class="row">
+
+                <div class="col-6">
+                    <label class="form-label"><strong>Cantidad de Jugadores</strong></label>
+                    <div class="input-group mb-3">
+                        <input type="number" min="0" id="CantidadJugadores" class="form-control"
+                            placeholder="Ingrese Cantidad de Jugadores">
+                        <button class="btn btn-secondary" type="button" id="IngresarJugadores">Ingresar</button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label class="form-label"><strong>Cantidad de Jugadores CPU</strong></label>
+                    <div class="input-group mb-3">
+                        <input type="number" min="0" id="CantidadCpu" class="form-control"
+                            placeholder="Ingrese Cantidad Jugadores CPU" ">
+                    <button class=" btn btn-secondary " type=" button " id="IngresarCpu">Ingresar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" row">
+            <div class="col-6">
+                <div id='datos'>
+                </div>
+                <br>
+                    <div id='parte1_1'>
+                        <button type="button" id="IngresarJ" disabled class="btn btn-primary">Ingresar Jugadores</button>
+                        <button type="button" id="Continuar"  class="btn btn-danger">Continuar</button>
+                    </div>
+                </div>
+            <div class="col-6">
+                <div id='datos2'>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h3 class="text-center"><strong>Datos de la pista</strong></h3>
+        <div class="row">
+            <div class="col-4">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Kilometros de La pista</label>
+                    <input type="number" class="form-control" disabled max='100' min='1' id="inputKilometros" placeholder="Kilometros">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Cantidad de Carriles</label>
+                    <input class="form-control" type="number" value="0" id="inputCCarriles" disabled>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Cantidad de Carros</label>
+                    <input class="form-control" type="number" value="0"id="inputCCarros" disabled >
+                </div>
+            </div>
+        </div>
+        <div id="parte2">
+            <button class="btn btn-primary" id="botonparte2" disabled >Guardar/Continuar</button>
+        </div>
+        <hr>
+
+        <div>
+            <h3 class="text-center"><strong>Elija el Carro</strong></h3>
+
+            <div class="row" id="ListaCarros">
+            </div>
+            <div id="parte2_2">
+                <button class="btn btn-primary" id="BotonGuardarCarro" disabled>Guardar/Continuar</button>
+            </div>
+        </div>
+        <hr>
+        <div class="text-center">
+            <h3>
+                <strong>
+                    A Jugar :D
+                </strong>
+            </h3>
+        </div>
+        <a class="nav-link text-center" href="./Jugar.html">
+            <button type="button" id="Jugar" disabled style="font-size: 30px;" class="btn btn-success">
+                Jugar
+            </button>
+        </a>
+
+<br><br><br>
+    </div>
+    <script src="./JS/Funciones.js" type="module"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+<footer class="text-center text-lg-start bg-light text-muted">
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      Hecho por Cristian Rendon Rodriguez - © 2021 Copyright
+      <br>
+      Correo: cristianrendon1704@gmail.com - Telefono: 3204316408
+    </div> 
+</footer>
+
+</html>

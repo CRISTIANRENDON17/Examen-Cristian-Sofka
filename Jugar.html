@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/bootstrap.css">
+    <link rel="stylesheet" href="./CSS/Jugar.css">
+    <title>Carrera</title>
+</head>
+<body class="container">
+    
+    <div class="row">
+        <div class="col-4">
+            <div>
+                <!--Tabla de posiciones-->
+                <h3 class="text-center"><strong>Tabla de posiciones</strong></h3>
+                <div class="ConteneDortabla">
+                    <div id='Turno'>
+                        <h5 ><strong id="Turno_de"> </strong></h5>
+                </div>
+                  <div id="TablaPosiciones" class="TablaPosiciones">
+                    
+                  </div>
+                  
+                </div>
+            </div>
+            <h3 class="text-center"><strong>Dado</strong></h3>
+            <div class="OrganizarDado">
+                <!--Boton y dado-->
+                <div class="Dado" id="Dado">
+                </div>
+                <br>
+                <button class="btn btn-primary" id="Tirar_Dado">Tirar dado</button>
+            </div>
+
+
+        </div>
+         <div class="col-8">
+             <br>
+            <div class="ContenedorInfoCarrera">
+                <h4 class="text-center"><strong id="InfoCarrera"></strong></h4>
+            </div>
+            <br>
+            
+            <div>
+                <div id="Pista_1">
+                </div>
+                    <img class="Pista"  src="./IMG/Pista.png" alt="">
+                <br><br><br><br><br><br>
+            </div>
+            <div>
+                <div id="Pista_2">
+                </div>
+                    <img class="Pista"  src="./IMG/Pista.png" alt="">
+                <br><br><br><br><br><br>
+            </div>
+            <div>
+                <div id="Pista_3">   
+
+                </div>
+                <img class="Pista"  src="./IMG/Pista.png" alt="">  
+                <br><br><br><br><br><br><br>    
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h4><strong>En camara Primeras 3 posiciones</strong></h4>
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn btn-danger" id="Volver_Jugar">Recargar Juego</button>
+                        </div>
+                        <div class="col-6">
+                            <a class="nav-link" href="Formulario.html">
+                                <button class="btn btn-success">Volver al Formulario</button>
+                            </a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ContenedorDescargarPodio" class="DescargarPodio text-center" style="display: none;"><br><br><br><a download="Podio.txt" id="downloadlink" style="display: none; font-size: 25px;">Descargar Podio</a></div>
+    
+
+    <script src="./JS/JugarFunciones.js" type="module"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+</body>
+<footer class="text-center text-lg-start bg-light text-muted">
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      Hecho por Cristian Rendon Rodriguez - © 2021 Copyright
+      <br>
+      Correo: cristianrendon1704@gmail.com - Telefono: 3204316408
+    </div> 
+</footer>
+</html>
