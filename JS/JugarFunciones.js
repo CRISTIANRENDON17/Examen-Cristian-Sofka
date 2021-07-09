@@ -254,6 +254,12 @@ function PinatarCarros(data, i) {
       <div class="col-3"><strong>0</strong></div>
       </div>
       `;
+
+      if( i === 1)
+      {
+        document.getElementById("Turno_de").innerHTML = ` ${nombre}`;
+      }
+    
     if (i === 1) {
       document.getElementById("Turno_de").innerHTML = ` ${nombre}`;
       document.getElementById("Pista_1").innerHTML = `
@@ -279,7 +285,7 @@ function PinatarCarros(data, i) {
           </div>
           <img src="./IMG/${Carro.nombre}.png"  >
         </div>`;
-    }
+    } 
     //console.log(nombre);
     //console.log(NumeroCarril);
   });
